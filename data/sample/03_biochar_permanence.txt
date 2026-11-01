@@ -1,0 +1,5 @@
+Biochar Permanence (SAMPLE DATA)
+
+The stability of biochar in soil depends mainly on its hydrogen-to-organic-carbon molar ratio (H/Corg). A lower ratio indicates more aromatic, more stable carbon. Many carbon-removal standards require an H/Corg ratio below 0.7.
+
+Biochar with a low H/Corg ratio is often modeled to retain a large share of its carbon for over 100 years; laboratory incubation studies suggest some fractions may persist for centuries or longer. A small labile fraction decomposes within the first few years.
