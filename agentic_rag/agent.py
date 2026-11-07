@@ -111,7 +111,9 @@ class Agent:
                 verdicts = []
                 for i, c in enumerate(claims):
                     x = vmap.get(i, {})
-                    ok = bool(x.get("supported")) and bool(c["citations"])
+                    raw_sup = x.get("supported")
+                    is_sup = raw_sup is True or (isinstance(raw_sup, str) and raw_sup.strip().lower() == "true")
+                    ok = is_sup and bool(c["citations"])
                     c["supported"], c["reason"] = ok, x.get("reason", "no verdict" if c["citations"] else "no valid citation")
                     verdicts.append(ok)
             trace.append({"step": "verify", "round": rnd, "verdicts": [{"claim": c["text"], "supported": c["supported"], "reason": c["reason"]} for c in claims]})
